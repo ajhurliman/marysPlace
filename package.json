@@ -1,0 +1,28 @@
+{
+  "name": "marysplace",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajhurliman/marysPlace.git"
+  },
+  "author": "ajHurliman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ajhurliman/marysPlace/issues"
+  },
+  "homepage": "https://github.com/ajhurliman/marysPlace#readme",
+  "dependencies": {
+    "angular": "^1.5.8"
+  },
+  "devDependencies": {
+    "del": "^2.2.1",
+    "gulp": "^3.9.1",
+    "gulp-copy": "0.0.2",
+    "run-sequence": "^1.2.2"
+  }
+}
