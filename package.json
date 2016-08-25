@@ -18,7 +18,11 @@
   "homepage": "https://github.com/ajhurliman/marysPlace#readme",
   "dependencies": {
     "angular": "^1.5.8",
-    "angular-ui-bootstrap": "^2.0.0"
+    "angular-ui-bootstrap": "^2.0.0",
+    "express": "^4.14.0",
+    "express-http-proxy": "^0.9.1",
+    "http-proxy": "^1.14.0",
+    "http-proxy-middleware": "^0.17.1"
   },
   "devDependencies": {
     "angular-ui-router": "^0.3.1",
