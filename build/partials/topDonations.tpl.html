@@ -1,0 +1,18 @@
+<div class="top-donations section clearfix">
+  <div class="col-xs-12">
+    <h1>Top Donations</h1>   
+  </div>
+  
+  <div class="col-xs-12 donater-container">
+    <div ng-repeat='donater in donaters' class='donater'>
+      <div class="inner-donater">
+        <img src="http://placehold.it/200x200" alt="">
+        <h4>{{donater.name}}</h4>
+        <p>AMOUNT RAISED:</p>
+        <h3>{{donater.amtRaised}}</h3>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
