@@ -1,0 +1,21 @@
+<div class="progress-section section clearfix">
+  <div class='col-xs-12 col-sm-6'>
+    <div class="donation-ticker">
+      <h3 class='text-center'>$105,738</h3>
+      <h5 class='text-center'>MONEY RAISED</h5>
+      <ul ticker timing="2000" class='ticker'>
+        <li ng-repeat="item in myTickerItems" class="item-{{$index}}">
+          {{item.title}} - {{item.copy}}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class='col-xs-12 col-sm-6'>
+    progress bar
+    <div class="progress-bar">
+      <uib-progressbar max="max" value="dynamic"><span style="color:white; white-space:nowrap;">{{dynamic}} / {{max}}</span></uib-progressbar>
+    </div>
+  </div>
+</div>

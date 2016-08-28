@@ -51,6 +51,7 @@
 	__webpack_require__(4);
 	// require('../vendor/js/soapclient');
 	__webpack_require__(6);
+	// require('../vendor/js/ticker.min');
 
 
 	var app = angular.module('nochildApp', ['ui.router', 'ui.bootstrap', 'angularSoap']);
@@ -76,7 +77,7 @@
 	//services
 	__webpack_require__(7)(app);
 
-	app.controller('mainController', function($scope, $http, soapService) {
+	app.controller('mainController', function($scope, $http, soapService, $interval) {
 	  $scope.donaters = [
 	    {
 	      name: "Mary's Place",
@@ -125,6 +126,41 @@
 	    }
 	  ];
 
+	  $scope.myTickerItems = [
+	     {
+	       title: 'item 1',
+	       copy: 'amazing copy here'
+	     },
+	     {
+	       title: 'item 2',
+	       copy: 'wow, this is great'
+	     },
+	     {
+	       title: 'item 3',
+	       copy: 'hello angular'
+	     },
+	     {
+	       title: 'item 4',
+	       copy: 'hello angular'
+	     },
+	     {
+	       title: 'item 5',
+	       copy: 'hello angular'
+	     },
+	     {
+	       title: 'item 6',
+	       copy: 'hello angular'
+	     },
+	     {
+	       title: 'item 7',
+	       copy: 'hello angular'
+	     },
+	     {
+	       title: 'item 8',
+	       copy: 'hello angular'
+	     }
+	  ];
+
 	  $scope.storyIsVisible = false;
 
 	  $scope.toggleStoryVisibility = function() {
@@ -166,11 +202,105 @@
 	  };
 	});
 
+	app.directive('ticker', function ($interval, $timeout) {
+	    return {
+
+	        restrict: 'A',
+	        scope: true,
+	        compile: function () {
+
+	            return function (scope, element, attributes) {
+
+	                var timing,
+	                    timingEffect,
+	                    timingEffectDivideBy = 4,
+	                    isHovered = false,
+	                    innerTime,
+	                    start;
+
+	                if (attributes.timing) {
+	                    timing = attributes.timing;
+	                    timingEffect = timing / timingEffectDivideBy;
+	                } else {
+	                    timing = 5000;
+	                    timingEffect = timing / timingEffectDivideBy / timingEffectDivideBy * 2;
+	                }
+
+	                scope.$watch(element, function () {
+
+	                    var list = element,
+	                        items = element.find('li'),
+	                        itemFirst;
+
+
+	                    if (items.length) {
+	                        list.addClass('active');
+
+	                        start = $interval(function () {
+
+	                            /*cancel the callback function for fade-out and makes the ticker steady.*/
+	                            if (isHovered) {
+	                                $timeout.cancel(innerTime);
+	                                return;
+	                            }
+
+	                            items = list.children('li');
+	                            itemFirst = angular.element(items[0]);
+
+	                            itemFirst.addClass('fade-out minus-margin-top');
+
+	                            $timeout(function () {
+	                                itemFirst.removeClass('minus-margin-top');
+	                                list.append(itemFirst);
+
+	                                innerTime = $timeout(function () {
+	                                    items.removeClass('fade-out');
+	                                }, timingEffect);
+
+	                            }, timingEffect);
+
+	                        }, timing);
+
+	                    } else {
+	                        console.warn('no items assigned to ticker! Ensure you have correctly assigned items to your ng-repeat.');
+	                    }
+
+	                });
+
+	                element.on('$destroy', function () {
+	                    $interval.cancel(start, 0);
+	                });
+
+	                /* 
+	                 *author - mayo
+	                 *checking for mouse enter the ticker region
+	                 */
+	                element.on('mouseenter', function () {
+	                    isHovered = true;
+	                });
+
+	                /* 
+	                 *author - mayo
+	                 *checking for mouse exit the ticker region
+	                 */
+	                element.on('mouseleave', function () {
+	                    isHovered = false;
+	                });
+
+	            };
+	        }
+
+	    };
+	});
+
+
+
 	//sections
 	__webpack_require__(8)(app);
 	__webpack_require__(9)(app);
 	__webpack_require__(10)(app);
 	__webpack_require__(11)(app);
+	__webpack_require__(12)(app);
 
 
 /***/ },
@@ -44085,7 +44215,6 @@
 /* 8 */
 /***/ function(module, exports) {
 
-	
 	module.exports = function(app) {
 	  app.directive('donateSection', function() {
 	    return {
@@ -44104,6 +44233,23 @@
 
 	
 	module.exports = function(app) {
+	  app.directive('progressSection', function() {
+	    return {
+	      restrict: 'A',
+	      replace: true,
+	      templateUrl: './partials/progressSection.tpl.html',
+	      controller: 'mainController'
+	    }
+	  });
+	};
+
+
+/***/ },
+/* 10 */
+/***/ function(module, exports) {
+
+	
+	module.exports = function(app) {
 	  app.directive('storySection', function() {
 	    return {
 	      restrict: 'A',
@@ -44116,7 +44262,7 @@
 
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports) {
 
 	
@@ -44133,7 +44279,7 @@
 
 
 /***/ },
-/* 11 */
+/* 12 */
 /***/ function(module, exports) {
 
 	

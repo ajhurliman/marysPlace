@@ -51,6 +51,10 @@ body {
       margin: 0;
       color: white; }
 
+.progress-section {
+  background-color: #386B83;
+  margin: 0; }
+
 .story-section {
   background-color: #386B83; }
   .story-section .continued-story {
@@ -110,3 +114,34 @@ body {
   .donate .wide-input {
     width: 100%;
     margin-bottom: 20px; }
+
+/*ticker css*/
+[ticker] * {
+  box-sizing: border-box; }
+
+[ticker].active {
+  display: block;
+  height: 195px;
+  overflow-y: hidden; }
+
+[ticker] li {
+  padding: 10.5px;
+  transition: opacity .3s ease,margin 1s ease; }
+
+[ticker] .fade-out {
+  opacity: 0; }
+
+[ticker] .minus-margin-top {
+  margin-top: -39px; }
+
+.donation-ticker {
+  background-color: #EBEBEB;
+  height: 275px;
+  width: 275px; }
+  .donation-ticker h3 {
+    padding-top: 10px; }
+
+.ticker {
+  width: 225px; }
+  .ticker li {
+    list-style: none; }

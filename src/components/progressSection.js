@@ -1,9 +1,10 @@
+
 module.exports = function(app) {
-  app.directive('donateSection', function() {
+  app.directive('progressSection', function() {
     return {
       restrict: 'A',
       replace: true,
-      templateUrl: './partials/donateSection.tpl.html',
+      templateUrl: './partials/progressSection.tpl.html',
       controller: 'mainController'
     }
   });
