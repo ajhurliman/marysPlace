@@ -115,6 +115,9 @@ app.controller('mainController', function($scope, $http, soapService, $interval)
      }
   ];
 
+  $scope.max = 20;
+  $scope.dynamic = 5;
+
   $scope.storyIsVisible = false;
 
   $scope.toggleStoryVisibility = function() {
