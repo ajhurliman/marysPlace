@@ -170,19 +170,12 @@
 	    $scope.storyIsVisible = !$scope.storyIsVisible;
 	  };
 
-	  $scope.testSoap = function() {
-	    soapService.HelloWorld().then(function(res) {
-	      alert(res);
-	    });
-	  };
-
-	  $scope.ping = function() {
-	    $http.get('/api').then(function(res, err) {
-	      if (err)
-	        console.log(err);
-	      console.log(res);
-	    });
-	  };
+	  $http({
+	    method: 'GET',
+	    url: '/getTotal'
+	  }).then(function(res, err) {
+	    $scope.totalRaised = parseInt(res.data.total);
+	  });
 
 	  $scope.setCredentials = function() {
 	    $http({

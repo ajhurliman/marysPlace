@@ -1,16 +1,16 @@
 <div class="donate-section section clearfix">
 
-  <!-- donate button -->
+  <!-- donation metrics -->
   <div class="col-xs-12 col-sm-6 panel-container" href=''>
-    <!-- metrics start -->
     <div class="donation-ticker">
 
-      <h1 class='text-center'>$105,738</h1>
+      <!-- title -->
+      <h1 class='text-center'>{{totalRaised | currency:'$':0}}</h1>
       <p class='text-center'>MONEY RAISED</p>
 
       <!-- progress bar -->
       <div class="progress-bar-container">
-        <uib-progressbar value="55" max="100"></uib-progressbar>
+        <uib-progressbar class='progress-striped' value="55" max="100" type='success'>55%</uib-progressbar>
       </div>
 
       <!-- ticker -->
@@ -21,12 +21,13 @@
       </ul>
       
     </div>
-
-    <!-- metrics end -->
   </div>
 
-  <div class="col-xs-12 col-sm-6 panel-container donate-button-container">
 
+  <!-- donate buttons -->
+  <div class="col-xs-12 col-sm-6 panel-container donate-button-container">
+    
+    <!-- marys place donate button -->
     <div>
       <a href="https://app.etapestry.com/onlineforms/MarysPlace/donate.html">
         <button type="button" class="donate-button">
@@ -35,8 +36,8 @@
       </a>
     </div>
 
+    <!-- amazon donate button -->
     <div>
-      <!-- amazon donate button -->
       <a href="https://www.amazon.com/ap/oa?response_type=token&client_id=amzn1.application-oa2-client.f069df74940d4390880e7e9190c7e1cc&scope=payments%3Ahosted+payments%3Abilling_address&redirect_uri=https%3A%2F%2Fpayments.amazon.com%2Fgp%2Fwidgets%2Fhosted%2FhostedLWAParameter&state=%7B%22hostedParamKey%22%3A%22ba50c708-7b68-4413-acf7-f232e3b22884%22%2C%22lwaClientId%22%3A%22amzn1.application-oa2-client.f069df74940d4390880e7e9190c7e1cc%22%2C%22useAmazonAddressBook%22%3A%22false%22%2C%22UCUIEndPoint%22%3A%22https%3A%2F%2Fpayments.amazon.com%22%2C%22cartOwnerId%22%3A%22A1RWX7F84N8AO4%22%7D">
         <div class="btn-lg btn-primary">
           Donate with Amazon
@@ -44,8 +45,6 @@
       </a>
     </div>
       
-      
-    
   </div>
 </div>
 
