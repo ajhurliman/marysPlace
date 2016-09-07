@@ -1,22 +1,24 @@
 <div class="donate-section section clearfix">
 
   <!-- donation metrics -->
-  <div class="col-xs-12 col-sm-6 panel-container" href=''>
+  <div class="col-xs-12 col-sm-8 panel-container" href=''>
     <div class="donation-ticker">
 
       <!-- title -->
       <h1 class='text-center'>{{totalRaised | currency:'$':0}}</h1>
-      <p class='text-center'>MONEY RAISED</p>
+      <p class='text-center'>Out of $500,000 goal</p>
 
       <!-- progress bar -->
       <div class="progress-bar-container">
-        <uib-progressbar class='progress-striped' value="55" max="100" type='success'>55%</uib-progressbar>
+        <uib-progressbar class='progress-striped' value="totalRaised" max="goal" type='success'>
+          {{(totalRaised < goal) ? parseInt(totalRaised/goal) : 100}}%
+        </uib-progressbar>
       </div>
 
       <!-- ticker -->
       <ul ticker timing="2000" class='ticker'>
         <li ng-repeat="item in myTickerItems" class="item-{{$index}}">
-          {{item.title}} - {{item.copy}}
+          <span>{{item.name}}</span>   <span class='pull-right'>{{item.amount | currency}}</span>
         </li>
       </ul>
       
@@ -25,11 +27,11 @@
 
 
   <!-- donate buttons -->
-  <div class="col-xs-12 col-sm-6 panel-container donate-button-container">
+  <div class="col-xs-12 col-sm-4 panel-container donate-button-container">
     
     <!-- marys place donate button -->
     <div>
-      <a href="https://app.etapestry.com/onlineforms/MarysPlace/donate.html">
+      <a ui-sref='donate'>
         <button type="button" class="donate-button">
           <h3>DONATE</h3>
         </button>

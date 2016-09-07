@@ -127,42 +127,209 @@
 	  ];
 
 	  $scope.myTickerItems = [
-	     {
-	       title: 'item 1',
-	       copy: 'amazing copy here'
-	     },
-	     {
-	       title: 'item 2',
-	       copy: 'wow, this is great'
-	     },
-	     {
-	       title: 'item 3',
-	       copy: 'hello angular'
-	     },
-	     {
-	       title: 'item 4',
-	       copy: 'hello angular'
-	     },
-	     {
-	       title: 'item 5',
-	       copy: 'hello angular'
-	     },
-	     {
-	       title: 'item 6',
-	       copy: 'hello angular'
-	     },
-	     {
-	       title: 'item 7',
-	       copy: 'hello angular'
-	     },
-	     {
-	       title: 'item 8',
-	       copy: 'hello angular'
-	     }
+	    {
+	      "amount": 95,
+	      "name": "Francesca Horton"
+	    },
+	    {
+	      "amount": 185,
+	      "name": "Laura Andrews"
+	    },
+	    {
+	      "amount":200,
+	      "name": "Ophelia Olsen"
+	    },
+	    {
+	      "amount": 45,
+	      "name": "Sargent Puckett"
+	    },
+	    {
+	      "amount": 55,
+	      "name": "Robyn Ray"
+	    },
+	    {
+	      "amount": 850,
+	      "name": "Flowers Norton"
+	    },
+	    {
+	      "amount": 125,
+	      "name": "Gentry Rose"
+	    },
+	    {
+	      "amount": 250,
+	      "name": "Lancaster Tran"
+	    },
+	    {
+	      "amount": 125,
+	      "name": "Henderson Cochran"
+	    },
+	    {
+	      "amount": 80,
+	      "name": "Rhea Dunlap"
+	    },
+	    {
+	      "amount": 245,
+	      "name": "Wall Pennington"
+	    },
+	    {
+	      "amount": 600,
+	      "name": "Chasity Chen"
+	    },
+	    {
+	      "amount": 175,
+	      "name": "Foreman Rasmussen"
+	    },
+	    {
+	      "amount": 100,
+	      "name": "Lucas Pruitt"
+	    },
+	    {
+	      "amount": 145,
+	      "name": "Lorena Whitfield"
+	    },
+	    {
+	      "amount": 45,
+	      "name": "Mable Osborne"
+	    },
+	    {
+	      "amount": 25,
+	      "name": "Lynn Ewing"
+	    },
+	    {
+	      "amount": 20,
+	      "name": "Britney Kramer"
+	    },
+	    {
+	      "amount": 130,
+	      "name": "Stacey Marshall"
+	    },
+	    {
+	      "amount": 40,
+	      "name": "Griffin Casey"
+	    },
+	    {
+	      "amount": 120,
+	      "name": "Nola Wallace"
+	    },
+	    {
+	      "amount": 25,
+	      "name": "Kathy Meyer"
+	    },
+	    {
+	      "amount": 2000,
+	      "name": "Edna Small"
+	    },
+	    {
+	      "amount": 170,
+	      "name": "Katrina Stokes"
+	    },
+	    {
+	      "amount": 100,
+	      "name": "Charlene Eaton"
+	    },
+	    {
+	      "amount": 25,
+	      "name": "Emily Cannon"
+	    },
+	    {
+	      "amount": 135,
+	      "name": "Franks Summers"
+	    },
+	    {
+	      "amount": 1500,
+	      "name": "Kelly Mcmillan"
+	    },
+	    {
+	      "amount": 150,
+	      "name": "Burris Vasquez"
+	    },
+	    {
+	      "amount": 30,
+	      "name": "Patrica Dillon"
+	    },
+	    {
+	      "amount": 130,
+	      "name": "Fern Cooley"
+	    },
+	    {
+	      "amount": 40,
+	      "name": "Clare Beck"
+	    },
+	    {
+	      "amount": 200,
+	      "name": "Nicholson Carrillo"
+	    },
+	    {
+	      "amount": 175,
+	      "name": "Adams Parrish"
+	    },
+	    {
+	      "amount": 120,
+	      "name": "Blankenship Guthrie"
+	    },
+	    {
+	      "amount": 1000,
+	      "name": "Tucker Moon"
+	    },
+	    {
+	      "amount": 240,
+	      "name": "Lamb Chapman"
+	    },
+	    {
+	      "amount": 60,
+	      "name": "Becker Rich"
+	    },
+	    {
+	      "amount": 40,
+	      "name": "Mccoy Greer"
+	    },
+	    {
+	      "amount": 150,
+	      "name": "Black Gamble"
+	    },
+	    {
+	      "amount": 115,
+	      "name": "Rose Hatfield"
+	    },
+	    {
+	      "amount": 20,
+	      "name": "Colleen Jones"
+	    },
+	    {
+	      "amount": 225,
+	      "name": "Holden Blankenship"
+	    },
+	    {
+	      "amount": 130,
+	      "name": "Kate Schneider"
+	    },
+	    {
+	      "amount": 50,
+	      "name": "Atkins Hoffman"
+	    },
+	    {
+	      "amount": 65,
+	      "name": "Deborah Moreno"
+	    },
+	    {
+	      "amount": 70,
+	      "name": "Melba Mullen"
+	    },
+	    {
+	      "amount": 50,
+	      "name": "Francisca Cruz"
+	    },
+	    {
+	      "amount": 225,
+	      "name": "Josefina Baker"
+	    },
+	    {
+	      "amount": 500,
+	      "name": "Juliette Watkins"
+	    }
 	  ];
 
-	  $scope.max = 20;
-	  $scope.dynamic = 5;
+	  $scope.goal = 500000;
 
 	  $scope.storyIsVisible = false;
 
@@ -177,25 +344,6 @@
 	    $scope.totalRaised = parseInt(res.data.total);
 	  });
 
-	  $scope.setCredentials = function() {
-	    $http({
-	      method: 'POST',
-	      // url: 'https://sna.etapestry.com/v3messaging/service?WSDL',
-	      url: '/api',
-	      headers: {
-	        'Content-Type': 'text/xml',
-	        'charset': 'UTF-8'
-	      },
-	      data: '<?xml version="1.0" encoding="UTF-8"?> <SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="etapestryAPI/service"> <SOAP-ENV:Body> <tns:login xmlns:tns="etapestryAPI/service"> <String_1 xsi:type="xsd:string">ajhurlimantest</String_1> <String_2 xsi:type="xsd:string">asdf1234</String_2> </tns:login> </SOAP-ENV:Body> </SOAP-ENV:Envelope>'
-	    }).then(function(res, err) {
-	      if (err)
-	        console.log(err);
-	      console.log(res);
-	    });
-	    // soapService.addAccount().then(function(res) {
-	    //   console.log(res);
-	    // });
-	  };
 	});
 
 	app.directive('ticker', function ($interval, $timeout) {

@@ -39,8 +39,21 @@ body {
   height: auto;
 }
 
+
+@media (max-width: $screen-md) {
+  .donate-section {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+    .donate-button-container {
+      height: 200px;
+    }
+  }
+}
 .donate-section {
   background-color: #386B83;
+  padding-top: 0;
 
   .panel-container {
     display: flex;
@@ -50,7 +63,7 @@ body {
   }
 
   .donate-button-container {
-    height: 300px;
+    height: 200px;
   }
 
   .donate-button {
@@ -81,7 +94,7 @@ body {
   .donation-ticker {
     background-color: #EBEBEB;
     height: 350px;
-    width: 275px;
+    width: 80%;
 
     h1 {
       padding-top: 15px;
@@ -169,8 +182,27 @@ body {
   background-color: #363753;
 }
 
+@media (min-width: $screen-sm) {
+  iframe {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media (min-width: $screen-md) {
+  iframe {
+    width: 80%;
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
 .donate {
   background-color: #386B83;
+
+  iframe {
+    height: 2300px;
+    display: block;
+  }
 
   .donate-form {
     margin: 0 20px;
@@ -187,7 +219,7 @@ body {
 [ticker] *{box-sizing:border-box}[ticker].active{display:block;height:195px;overflow-y:hidden}[ticker] li{padding:10.5px;transition:opacity .3s ease,margin 1s ease}[ticker] .fade-out{opacity:0}[ticker] .minus-margin-top{margin-top:-39px}
 
 .ticker {
-  width: 225px;
+  width: 90%;
 
   li {
     list-style: none;
