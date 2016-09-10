@@ -39,7 +39,6 @@ body {
   height: auto;
 }
 
-
 @media (max-width: $screen-md) {
   .donate-section {
     display: flex;
@@ -47,10 +46,27 @@ body {
     align-items: center;
 
     .donate-button-container {
-      height: 200px;
+      height: 400px;
     }
   }
 }
+@media only screen 
+  and (min-device-width: 320px) 
+  /*and (max-device-width: 480px)*/
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+  .donate-section {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+    .donate-button-container {
+      height: 400px;
+    }
+  }
+
+}
+
 .donate-section {
   background-color: #386B83;
   padding-top: 0;
@@ -63,7 +79,7 @@ body {
   }
 
   .donate-button-container {
-    height: 200px;
+    height: 400px;
   }
 
   .donate-button {
@@ -214,6 +230,20 @@ body {
   }
 }
 
+.aspect-ratio {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 51%;
+
+  iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+}
 
 /*ticker css*/
 [ticker] *{box-sizing:border-box}[ticker].active{display:block;height:195px;overflow-y:hidden}[ticker] li{padding:10.5px;transition:opacity .3s ease,margin 1s ease}[ticker] .fade-out{opacity:0}[ticker] .minus-margin-top{margin-top:-39px}
