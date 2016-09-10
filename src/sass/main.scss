@@ -43,16 +43,16 @@ body {
   .donate-section {
     display: flex;
     flex-direction: column-reverse;
-    align-items: center;
+    /*align-items: center;*/
 
     .donate-button-container {
-      height: 400px;
+      height: 385px;
     }
   }
 }
 @media only screen 
   and (min-device-width: 320px) 
-  /*and (max-device-width: 480px)*/
+  and (max-device-width: 500px)
   and (-webkit-min-device-pixel-ratio: 2) {
 
   .donate-section {
@@ -61,8 +61,15 @@ body {
     align-items: center;
 
     .donate-button-container {
-      height: 400px;
+      height: 385px;
     }
+  }
+
+  .story-element {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
   }
 
 }
@@ -79,7 +86,7 @@ body {
   }
 
   .donate-button-container {
-    height: 400px;
+    height: 385px;
   }
 
   .donate-button {
