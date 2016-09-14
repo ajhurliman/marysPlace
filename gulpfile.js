@@ -20,6 +20,11 @@ gulp.task('copyVendorJs', function() {
         .pipe(copy('./build'));
 });
 
+// gulp.task('copyVendorCss', function() {
+//     return gulp.src('css/**/*', {'cwd': 'vendor/', 'base': '.'})
+//         .pipe(copy('./build'));
+// });
+
 gulp.task('copyIndex', function() {
     return gulp.src('index.html', {'cwd': 'src/', 'base': '.'})
         .pipe(copy('./build'));
@@ -56,6 +61,7 @@ gulp.task('build', function() {
         'clean',
         'copyAssets',
         'copyVendorJs',
+        // 'copyVendorCss',
         'copyIndex',
         'copyPartials',
         'sass',
@@ -68,6 +74,7 @@ gulp.task('default', function() {
         'clean',
         'copyAssets',
         'copyVendorJs',
+        // 'copyVendorCss',
         'copyIndex',
         'copyPartials',
         'sass',
