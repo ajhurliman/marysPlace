@@ -445,6 +445,7 @@
 	__webpack_require__(10)(app);
 	__webpack_require__(11)(app);
 	__webpack_require__(12)(app);
+	__webpack_require__(13)(app);
 
 
 /***/ },
@@ -44438,6 +44439,21 @@
 	  });
 	};
 
+
+/***/ },
+/* 13 */
+/***/ function(module, exports) {
+
+	module.exports = function(app) {
+
+	  app.directive('callToAction', function() {
+	    return {
+	      restrict: 'A',
+	      replace: true,
+	      templateUrl: './partials/callToAction.tpl.html'
+	    };
+	  });
+	};
 
 /***/ }
 /******/ ]);

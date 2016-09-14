@@ -51,9 +51,26 @@ body {
   }
 }
 
+.call-to-action {
+  padding: 50px 0;
+  background-color: #386B83;
+  color: white;
+  text-align: center;
+
+  .call-to-action-text {
+    margin: 0;
+    font-size: 50px;
+  }
+}
+
 .donate-section {
   background-color: #386B83;
   padding-top: 0;
+
+  .ap-light {
+    /*this is for the amazon donate button*/
+    width: 90%;
+  }
 
   .panel-container {
     display: flex;
@@ -64,6 +81,10 @@ body {
 
   .donate-button-container {
     height: 385px;
+
+    a:hover {
+      text-decoration: none;
+    }
   }
 
   .donate-button {
@@ -89,6 +110,10 @@ body {
       margin: 0;
       padding-bottom: 10px;
     }
+
+    &:hover {
+      background-color: rgb(255,122,56);
+    }
   }
 }
 
@@ -101,7 +126,7 @@ body {
   .donation-ticker {
     background-color: #EBEBEB;
     height: 350px;
-    width: 80%;
+    width: 90%;
 
     h1 {
       padding-top: 15px;
@@ -114,6 +139,12 @@ body {
 
 .story-section {
   background-color: #386B83;
+
+  .story-container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   .continued-story {
     width: auto !important;
@@ -223,7 +254,9 @@ body {
 
 .aspect-ratio {
   position: relative;
-  width: 100%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
   height: 0;
   padding-bottom: 51%;
 
@@ -263,6 +296,9 @@ body {
   .donation-ticker {
     width: 80%;
   }
+  .ap-light {
+    width: 80% !important;
+  }
 
   .donate-section {
     display: flex;
@@ -274,8 +310,11 @@ body {
     }
   }
 
+  .aspect-ratio, .story-container {
+    width: 80% !important;
+  }
+
   .story-element {
-    width: 80%;
     margin-left: auto;
     margin-right: auto;
     float: none;

@@ -399,3 +399,4 @@ require('./components/progressSection')(app);
 require('./components/storySection')(app);
 require('./components/topDonations')(app);
 require('./components/footer')(app);
+require('./components/callToAction')(app);
