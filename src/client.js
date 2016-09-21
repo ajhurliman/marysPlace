@@ -3,12 +3,9 @@
 var angular = require('angular');
 require('angular-ui-router');
 require('angular-ui-bootstrap');
-// require('../vendor/js/soapclient');
-require('../vendor/js/angular.soap');
-// require('../vendor/js/ticker.min');
 
 
-var app = angular.module('nochildApp', ['ui.router', 'ui.bootstrap', 'angularSoap']);
+var app = angular.module('nochildApp', ['ui.router', 'ui.bootstrap']);
 
 app.config(function($urlRouterProvider, $stateProvider) {
   $urlRouterProvider.when('', '/landing').otherwise('/landing');
@@ -28,10 +25,8 @@ app.config(function($urlRouterProvider, $stateProvider) {
 
 });
 
-//services
-require('./services/soapService')(app);
 
-app.controller('mainController', function($scope, $http, soapService, $interval) {
+app.controller('mainController', function($scope, $http, $interval) {
   $scope.donaters = [
     {
       name: "Mary's Place",
@@ -394,6 +389,7 @@ app.directive('ticker', function ($interval, $timeout) {
 
 
 //sections
+require('./components/header')(app);
 require('./components/donateSection')(app);
 require('./components/progressSection')(app);
 require('./components/storySection')(app);

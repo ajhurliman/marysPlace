@@ -100,11 +100,14 @@ body {
     font-size: 10px; }
 
 .story-section {
-  background-color: #386B83; }
+  /*background-color: #386B83;*/
+  background-color: #363753; }
   .story-section .story-container {
     width: 90%;
     margin-left: auto;
     margin-right: auto; }
+    .story-section .story-container h5 > strong {
+      color: white; }
   .story-section .continued-story {
     width: auto !important; }
   .story-section iframe {
@@ -215,6 +218,16 @@ body {
   width: 90%; }
   .ticker li {
     list-style: none; }
+
+.header {
+  padding: 0; }
+
+#home-link {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  cursor: pointer; }
 
 /*cell phone stuff*/
 @media only screen and (min-device-width: 320px) and (max-device-width: 500px) {

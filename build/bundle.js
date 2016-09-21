@@ -49,12 +49,9 @@
 	var angular = __webpack_require__(1);
 	__webpack_require__(3);
 	__webpack_require__(4);
-	// require('../vendor/js/soapclient');
-	__webpack_require__(6);
-	// require('../vendor/js/ticker.min');
 
 
-	var app = angular.module('nochildApp', ['ui.router', 'ui.bootstrap', 'angularSoap']);
+	var app = angular.module('nochildApp', ['ui.router', 'ui.bootstrap']);
 
 	app.config(function($urlRouterProvider, $stateProvider) {
 	  $urlRouterProvider.when('', '/landing').otherwise('/landing');
@@ -74,10 +71,8 @@
 
 	});
 
-	//services
-	__webpack_require__(7)(app);
 
-	app.controller('mainController', function($scope, $http, soapService, $interval) {
+	app.controller('mainController', function($scope, $http, $interval) {
 	  $scope.donaters = [
 	    {
 	      name: "Mary's Place",
@@ -440,12 +435,13 @@
 
 
 	//sections
+	__webpack_require__(6)(app);
+	__webpack_require__(7)(app);
 	__webpack_require__(8)(app);
 	__webpack_require__(9)(app);
 	__webpack_require__(10)(app);
 	__webpack_require__(11)(app);
 	__webpack_require__(12)(app);
-	__webpack_require__(13)(app);
 
 
 /***/ },
@@ -44296,68 +44292,21 @@
 /* 6 */
 /***/ function(module, exports) {
 
-	angular.module('angularSoap', [])
-
-	.factory("$soap",['$q',function($q){
-		return {
-			post: function(url, action, params){
-				var deferred = $q.defer();
-				
-				//Create SOAPClientParameters
-				var soapParams = new SOAPClientParameters();
-				for(var param in params){
-					soapParams.add(param, params[param]);
-				}
-				
-				//Create Callback
-				var soapCallback = function(e){
-					if(e.constructor.toString().indexOf("function Error()") != -1){
-						deferred.reject("An error has occurred.");
-					} else {
-						deferred.resolve(e);
-					}
-				}
-				
-				SOAPClient.invoke(url, action, soapParams, true, soapCallback);
-
-				return deferred.promise;
-			},
-			setCredentials: function(username, password){
-				SOAPClient.username = username;
-				SOAPClient.password = password;
-			}
-		}
-	}]);
+	
+	module.exports = function(app) {
+	  app.directive('header', function() {
+	    return {
+	      restrict: 'A',
+	      replace: true,
+	      templateUrl: './partials/header.tpl.html',
+	      controller: 'mainController'
+	    }
+	  });
+	};
 
 
 /***/ },
 /* 7 */
-/***/ function(module, exports) {
-
-	module.exports = function(app) {
-	  app.factory('soapService', ['$soap', function($soap) {
-	    // var baseUrl = 'https://sna.etapestry.com/v3messaging/service?WSDL';
-	    var baseUrl = '/proxy';
-	    $soap.setCredentials('ajhurlimantest', 'asdf1234');
-
-	    return {
-	      addAccount: function() {
-	        return $soap.post(baseUrl, 'addAccount', 
-	          {
-	            account: {
-	              nameFormat: 1,
-	              country: 'US'
-	            },
-	            createFieldAndValues: true
-	          });
-	      }
-	    };
-
-	  }]);
-	};
-
-/***/ },
-/* 8 */
 /***/ function(module, exports) {
 
 	module.exports = function(app) {
@@ -44373,7 +44322,7 @@
 
 
 /***/ },
-/* 9 */
+/* 8 */
 /***/ function(module, exports) {
 
 	
@@ -44390,7 +44339,7 @@
 
 
 /***/ },
-/* 10 */
+/* 9 */
 /***/ function(module, exports) {
 
 	
@@ -44407,7 +44356,7 @@
 
 
 /***/ },
-/* 11 */
+/* 10 */
 /***/ function(module, exports) {
 
 	
@@ -44424,7 +44373,7 @@
 
 
 /***/ },
-/* 12 */
+/* 11 */
 /***/ function(module, exports) {
 
 	
@@ -44441,7 +44390,7 @@
 
 
 /***/ },
-/* 13 */
+/* 12 */
 /***/ function(module, exports) {
 
 	module.exports = function(app) {

@@ -1,13 +1,15 @@
 // var proxy       = require('express-http-proxy');
 // var httpProxy   = require('http-proxy');
-var util        = require('util');
-var soap        = require('soap');
-var request     = require('request');
-var proxy       = require('http-proxy-middleware');
-var express     = require('express');
-var xml2js      = require('xml2js').parseString;
-var server      = express();
-process.env.PWD = process.cwd();
+var util          = require('util');
+var soap          = require('soap');
+var request       = require('request');
+var proxy         = require('http-proxy-middleware');
+var express       = require('express');
+var xml2js        = require('xml2js').parseString;
+var server        = express();
+var loginId       = process.env.LOGINID || 'ajhurlimantest';
+var loginPassword = process.env.PASSWORD || 'asdf1234';
+process.env.PWD   = process.cwd();
 
 //soap stuff
 // var url = 'https://sna.etapestry.com/v3messaging/service?WSDL';
@@ -27,9 +29,14 @@ process.env.PWD = process.cwd();
 
 
 
-
 //request stuff
 request = request.defaults({jar: true});
+
+var optionsBody = '<?xml version="1.0" encoding="UTF-8"?> <SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="etapestryAPI/service"> <SOAP-ENV:Body> <tns:login xmlns:tns="etapestryAPI/service"> <String_1 xsi:type="xsd:string">' +
+                  loginId +
+                  '</String_1> <String_2 xsi:type="xsd:string">' +
+                  loginPassword +
+                  '</String_2> </tns:login> </SOAP-ENV:Body> </SOAP-ENV:Envelope>';
 
 var options = {
   url: 'https://sna.etapestry.com/v3messaging/service?WSDL',
@@ -38,7 +45,7 @@ var options = {
     'Content-Type': 'text/xml',
     'charset': 'UTF-8'
   },
-  body: '<?xml version="1.0" encoding="UTF-8"?> <SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="etapestryAPI/service"> <SOAP-ENV:Body> <tns:login xmlns:tns="etapestryAPI/service"> <String_1 xsi:type="xsd:string">ajhurlimantest</String_1> <String_2 xsi:type="xsd:string">asdf1234</String_2> </tns:login> </SOAP-ENV:Body> </SOAP-ENV:Envelope>'
+  body: optionsBody
 };
 
 var cookie;
