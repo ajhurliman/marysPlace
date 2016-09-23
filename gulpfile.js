@@ -1,10 +1,11 @@
-var gulp               = require('gulp');
-var copy               = require('gulp-copy');
-var clean              = require('del');
-var uglify             = require('gulp-uglify');
-var runSequence        = require('run-sequence');
-var webpack            = require('gulp-webpack');
-var sass               = require('gulp-sass');
+var gulp        = require('gulp');
+var copy        = require('gulp-copy');
+var clean       = require('del');
+var uglify      = require('gulp-uglify');
+var runSequence = require('run-sequence');
+var gulpWebpack = require('gulp-webpack');
+var webpack     = require('webpack');
+var sass        = require('gulp-sass');
 
 gulp.task('clean', function(){
     return clean(['./build']);
@@ -47,12 +48,24 @@ gulp.task('sass', function() {
 
 gulp.task('pack', function() {
     return gulp.src('src/client.js')
-        .pipe(webpack({
+        .pipe(gulpWebpack({
             watch: false,
             output: {
                 filename: 'bundle.js'
             }
         }))
+        .pipe(gulp.dest('build/'));
+});
+
+gulp.task('distPack', function() {
+    return gulp.src('src/client.js')
+        .pipe(gulpWebpack({
+            watch: false,
+            output: {
+                filename: 'bundle.js'
+            },
+            plugins: [new webpack.optimize.UglifyJsPlugin()],
+        }, webpack))
         .pipe(gulp.dest('build/'));
 });
 
@@ -81,5 +94,18 @@ gulp.task('default', function() {
         'pack',
         // 'cssminSync',
         'watch'
+    );
+});
+
+gulp.task('dist', function() {
+    runSequence(
+        'clean',
+        'copyAssets',
+        'copyVendorJs',
+        // 'copyVendorCss',
+        'copyIndex',
+        'copyPartials',
+        'sass',
+        'distPack'
     );
 });
