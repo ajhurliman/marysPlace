@@ -42,8 +42,11 @@ body {
 @media (max-width: $screen-md) {
   .donate-section {
     display: flex;
+    display: -webkit-flex;
     flex-direction: column-reverse;
+    -webkit-flex-direction: column-reverse;
     align-items: center;
+    -webkit-align-items: center;
 
     .donate-button-container {
       height: 385px;
@@ -74,9 +77,13 @@ body {
 
   .panel-container {
     display: flex;
+    display: -webkit-flex;
     flex-direction: column;
+    -webkit-flex-direction: column;
     justify-content: space-around;
+    -webkit-justify-content: space-around;
     align-items: center;
+    -webkit-align-items: center;
   }
 
   .donate-button-container {
@@ -88,13 +95,16 @@ body {
   }
 
   .donate-button {
+    cursor: pointer;
     background-color: #FF5C1A;
     width: 180px;
     height: 80px;
     border-radius: 0;
     border: none;
     display: flex;
+    display: -webkit-flex;
     flex-direction: column;
+    -webkit-flex-direction: column;
     justify-content: space-around;
     align-items: center;
 
@@ -178,13 +188,17 @@ body {
 
   .donater-container {
     display: flex;
+    display: -webkit-flex;
     flex-direction: row;
+    -webkit-flex-direction: row;
     flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 
     .donater {
       display: flex;
+      display: -webkit-flex;
       background-color: white;
       width: 235px;
       margin-right: 20px;
@@ -198,9 +212,13 @@ body {
         margin: 10px;
 
         display: flex;
+        display: -webkit-flex;
         justify-content: center;
+        -webkit-justify-content: center;
         align-items: flex-start;
+        -webkit-align-items: flex-start;
         flex-direction: column;
+        -webkit-flex-direction: column;
 
         img {
           margin-top: 7px;
@@ -304,11 +322,31 @@ body {
   and (min-device-width: 320px) 
   and (max-device-width: 500px) {
 
+  .donate-button {
+    width: 80% !important;
+    height: 130px !important;
+
+    h3 {
+      font-size: 75px !important;
+    }
+    p {
+      font-size: 32px !important;
+    }
+  }
+
   .panel-container {
     width: 100%;
   }
   .donation-ticker {
     width: 80%;
+    font-size: 32px;
+
+    h1 {
+      font-size: 45px;
+    }
+    p {
+      font-size: 20px;
+    }
   }
   .ap-light {
     width: 80% !important;
@@ -316,11 +354,12 @@ body {
 
   .donate-section {
     display: flex;
+    display: -webkit-flex;
     flex-direction: column-reverse;
     align-items: center;
 
     .donate-button-container {
-      height: 385px;
+      height: 420px;
     }
   }
 
@@ -332,6 +371,19 @@ body {
     margin-left: auto;
     margin-right: auto;
     float: none;
+    font-size: 32px;
+  }
+
+  .donater {
+    h4 {
+      font-size: 28px;
+    }
+    p {
+      font-size: 20px;
+    }
+    h3 {
+      font-size: 28px;
+    }
   }
 
 }
