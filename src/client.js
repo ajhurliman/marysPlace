@@ -29,56 +29,65 @@ app.config(function($urlRouterProvider, $stateProvider) {
 app.controller('mainController', function($scope, $http, $interval) {
   $scope.donaters = [
     {
-      name: "Mary's Place",
-      amtRaised: '$105,375',
-      imgUrl: 'http://sheenholders.com/200x200'
-    },
-    {
-      name: "Bank of America",
-      amtRaised: '$25,200',
-      imgUrl: 'http://sheenholders.com/200x200'
-    },
-    {
-      name: "Windermere Real Estate",
-      amtRaised: '$22,120',
-      imgUrl: 'http://sheenholders.com/200x200'
-    },
-    {
-      name: "Seattle Interactive Conference",
-      amtRaised: '$18,830',
-      imgUrl: 'http://sheenholders.com/200x200'
-    },
-    {
       name: "Dick's Drive-In Restaurants",
-      amtRaised: '$105375',
+      amtRaised: '$10,000',
+      imgUrl: 'http://sheenholders.com/200x200'
+    },
+    {
+      name: "Biscuit Bitch",
+      amtRaised: '$5,000',
+      imgUrl: 'http://sheenholders.com/200x200'
+    },
+    {
+      name: "Vulcan",
+      amtRaised: '$10,000',
+      imgUrl: 'http://sheenholders.com/200x200'
+    },
+    {
+      name: "Gravity Payments",
+      amtRaised: '$10,000',
       imgUrl: 'http://sheenholders.com/200x200'
     },
     {
       name: "Lennar Multifamily Communities",
-      amtRaised: '$105375',
+      amtRaised: '$5000',
       imgUrl: 'http://sheenholders.com/200x200'
     },
     {
-      name: "Sync Fitness",
-      amtRaised: '$105375',
-      imgUrl: 'http://sheenholders.com/200x200'
-    },
-    {
-      name: "G2 Web Services",
-      amtRaised: '$105375',
-      imgUrl: 'http://sheenholders.com/200x200'
-    },
-    {
-      name: "Pemco Insurance",
-      amtRaised: '$105375',
+      name: "Pemco",
+      amtRaised: '$5000',
       imgUrl: 'http://sheenholders.com/200x200'
     }
   ];
 
   $scope.myTickerItems = [
     {
+      "amount": 10000,
+      "name": "Dick's Drive-In Restaurants"
+    },
+    {
+      "amount": 5000,
+      "name": "Biscuit Bitch"
+    },
+    {
+      "amount": 10000,
+      "name": "Vulcan"
+    },
+    {
+      "amount": 10000,
+      "name": "Gravity Payments"
+    },
+    {
+      "amount": 5000,
+      "name": "Lennar Multifamily Communities"
+    },
+    {
+      "amount": 5000,
+      "name": "Pemco"
+    },
+    {
       "amount": 95,
-      "name": "Francesca Horton"
+      "name": "Francis Horton"
     },
     {
       "amount": 185,
@@ -90,7 +99,7 @@ app.controller('mainController', function($scope, $http, $interval) {
     },
     {
       "amount": 45,
-      "name": "Sargent Puckett"
+      "name": "Frank Puckett"
     },
     {
       "amount": 55,
@@ -98,183 +107,19 @@ app.controller('mainController', function($scope, $http, $interval) {
     },
     {
       "amount": 850,
-      "name": "Flowers Norton"
+      "name": "Patty Norton"
     },
     {
       "amount": 125,
-      "name": "Gentry Rose"
+      "name": "Debbie Rose"
     },
     {
       "amount": 250,
-      "name": "Lancaster Tran"
+      "name": "Jimmy Tran"
     },
     {
       "amount": 125,
-      "name": "Henderson Cochran"
-    },
-    {
-      "amount": 80,
-      "name": "Rhea Dunlap"
-    },
-    {
-      "amount": 245,
-      "name": "Wall Pennington"
-    },
-    {
-      "amount": 600,
-      "name": "Chasity Chen"
-    },
-    {
-      "amount": 175,
-      "name": "Foreman Rasmussen"
-    },
-    {
-      "amount": 100,
-      "name": "Lucas Pruitt"
-    },
-    {
-      "amount": 145,
-      "name": "Lorena Whitfield"
-    },
-    {
-      "amount": 45,
-      "name": "Mable Osborne"
-    },
-    {
-      "amount": 25,
-      "name": "Lynn Ewing"
-    },
-    {
-      "amount": 20,
-      "name": "Britney Kramer"
-    },
-    {
-      "amount": 130,
-      "name": "Stacey Marshall"
-    },
-    {
-      "amount": 40,
-      "name": "Griffin Casey"
-    },
-    {
-      "amount": 120,
-      "name": "Nola Wallace"
-    },
-    {
-      "amount": 25,
-      "name": "Kathy Meyer"
-    },
-    {
-      "amount": 2000,
-      "name": "Edna Small"
-    },
-    {
-      "amount": 170,
-      "name": "Katrina Stokes"
-    },
-    {
-      "amount": 100,
-      "name": "Charlene Eaton"
-    },
-    {
-      "amount": 25,
-      "name": "Emily Cannon"
-    },
-    {
-      "amount": 135,
-      "name": "Franks Summers"
-    },
-    {
-      "amount": 1500,
-      "name": "Kelly Mcmillan"
-    },
-    {
-      "amount": 150,
-      "name": "Burris Vasquez"
-    },
-    {
-      "amount": 30,
-      "name": "Patrica Dillon"
-    },
-    {
-      "amount": 130,
-      "name": "Fern Cooley"
-    },
-    {
-      "amount": 40,
-      "name": "Clare Beck"
-    },
-    {
-      "amount": 200,
-      "name": "Nicholson Carrillo"
-    },
-    {
-      "amount": 175,
-      "name": "Adams Parrish"
-    },
-    {
-      "amount": 120,
-      "name": "Blankenship Guthrie"
-    },
-    {
-      "amount": 1000,
-      "name": "Tucker Moon"
-    },
-    {
-      "amount": 240,
-      "name": "Lamb Chapman"
-    },
-    {
-      "amount": 60,
-      "name": "Becker Rich"
-    },
-    {
-      "amount": 40,
-      "name": "Mccoy Greer"
-    },
-    {
-      "amount": 150,
-      "name": "Black Gamble"
-    },
-    {
-      "amount": 115,
-      "name": "Rose Hatfield"
-    },
-    {
-      "amount": 20,
-      "name": "Colleen Jones"
-    },
-    {
-      "amount": 225,
-      "name": "Holden Blankenship"
-    },
-    {
-      "amount": 130,
-      "name": "Kate Schneider"
-    },
-    {
-      "amount": 50,
-      "name": "Atkins Hoffman"
-    },
-    {
-      "amount": 65,
-      "name": "Deborah Moreno"
-    },
-    {
-      "amount": 70,
-      "name": "Melba Mullen"
-    },
-    {
-      "amount": 50,
-      "name": "Francisca Cruz"
-    },
-    {
-      "amount": 225,
-      "name": "Josefina Baker"
-    },
-    {
-      "amount": 500,
-      "name": "Juliette Watkins"
+      "name": "Andrew Cochran"
     }
   ];
 
