@@ -136,6 +136,8 @@ app.controller('mainController', function($scope, $http, $interval) {
     url: '/getTotal'
   }).then(function(res, err) {
     $scope.totalRaised = parseInt(res.data.total);
+    // $scope.totalRaised = 100005; //remove before flight!
+    $scope.percentRaised = Math.round($scope.totalRaised/$scope.goal*100);
   });
 
 });
