@@ -27,6 +27,8 @@ app.config(function($urlRouterProvider, $stateProvider) {
 
 
 app.controller('mainController', function($scope, $http, $interval) {
+  document.cookie = undefined;
+  
   $scope.donaters = [
     {
       name: "Dick's Drive-In Restaurants",
