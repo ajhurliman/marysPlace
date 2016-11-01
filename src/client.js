@@ -7,7 +7,7 @@ require('angular-ui-bootstrap');
 
 var app = angular.module('nochildApp', ['ui.router', 'ui.bootstrap']);
 
-app.config(function($urlRouterProvider, $stateProvider) {
+app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {
   $urlRouterProvider.when('', '/landing').otherwise('/landing');
 
   $stateProvider
@@ -23,12 +23,12 @@ app.config(function($urlRouterProvider, $stateProvider) {
       controller: 'mainController'
     });
 
-});
+}]);
 
 
-app.controller('mainController', function($scope, $http, $interval) {
+app.controller('mainController', ['$scope', '$http', '$interval', function($scope, $http, $interval) {
   document.cookie = undefined;
-  
+
   $scope.donaters = [
     {
       name: "Dick's Drive-In Restaurants",
@@ -142,9 +142,9 @@ app.controller('mainController', function($scope, $http, $interval) {
     $scope.percentRaised = Math.round($scope.totalRaised/$scope.goal*100);
   });
 
-});
+}]);
 
-app.directive('ticker', function ($interval, $timeout) {
+app.directive('ticker', ['$interval', '$timeout', function ($interval, $timeout) {
     return {
 
         restrict: 'A',
@@ -233,7 +233,7 @@ app.directive('ticker', function ($interval, $timeout) {
         }
 
     };
-});
+}]);
 
 
 
