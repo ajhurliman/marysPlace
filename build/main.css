@@ -169,7 +169,8 @@ body {
           margin-top: 7px;
           align-self: center; }
         .top-donations .donater-container .donater .inner-donater h4 {
-          margin: 10px 7px; }
+          margin: 10px 7px;
+          height: 90px; }
         .top-donations .donater-container .donater .inner-donater h3 {
           margin: 5px 7px;
           color: white; }
@@ -264,7 +265,7 @@ body {
   .progress-bar-success > span {
     font-size: 24px; }
   .call-to-action-text {
-    font-size: 65px; }
+    font-size: 65px !important; }
   .panel-container {
     width: 100%; }
   .donation-ticker {
