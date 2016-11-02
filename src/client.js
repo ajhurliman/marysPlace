@@ -51,7 +51,7 @@ app.controller('mainController', ['$scope', '$http', '$interval', function($scop
       imgUrl: 'http://sheenholders.com/200x200'
     },
     {
-      name: "Lennar Multifamily Communities",
+      name: "Lennar Multifamily Homes",
       amtRaised: '$5000',
       imgUrl: 'http://sheenholders.com/200x200'
     },
@@ -81,7 +81,7 @@ app.controller('mainController', ['$scope', '$http', '$interval', function($scop
     },
     {
       "amount": 5000,
-      "name": "Lennar Multifamily Communities"
+      "name": "Lennar Multifamily Homes"
     },
     {
       "amount": 5000,

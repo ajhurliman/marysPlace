@@ -259,6 +259,12 @@ body {
       font-size: 75px !important; }
     .donate-button p {
       font-size: 32px !important; }
+  .ap-dw-list-item > a {
+    font-size: 32px !important; }
+  .progress-bar-success > span {
+    font-size: 24px; }
+  .call-to-action-text {
+    font-size: 65px; }
   .panel-container {
     width: 100%; }
   .donation-ticker {
