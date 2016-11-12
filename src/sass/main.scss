@@ -107,6 +107,7 @@ body {
     -webkit-flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    -webkit-align-items: center;
 
     h3 {
       font-size: 34px;
@@ -308,17 +309,27 @@ body {
   }
 }
 
+.donater-img {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
 
 .header {
   padding: 0;
+  position: relative;
 }
 
 #home-link {
   position: absolute;
+  left: 90px;
+  top: 15px;
   width: 30px;
   height: 30px;
   background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
+  box-shadow: 1px 1px 2px white;
+  border-radius: 3px;
 }
 
 /*cell phone stuff*/

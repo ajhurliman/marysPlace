@@ -1,11 +1,21 @@
 'use strict';
 
+var firebase = require('firebase');
 var angular = require('angular');
+var angularfire = require('angularfire');
 require('angular-ui-router');
 require('angular-ui-bootstrap');
 
+firebase.initializeApp({
+  apiKey: "AIzaSyAw0-pqawx6HR_tCY_Q6RuK17RwbY_A9rA",
+  authDomain: "ncso-b01fc.firebaseapp.com",
+  databaseURL: "https://ncso-b01fc.firebaseio.com",
+  storageBucket: "ncso-b01fc.appspot.com",
+  messagingSenderId: "991912784797"
+});
 
-var app = angular.module('nochildApp', ['ui.router', 'ui.bootstrap']);
+
+var app = angular.module('nochildApp', ['firebase', 'ui.router', 'ui.bootstrap']);
 
 app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {
   $urlRouterProvider.when('', '/landing').otherwise('/landing');
@@ -26,39 +36,96 @@ app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider,
 }]);
 
 
-app.controller('mainController', ['$scope', '$http', '$interval', function($scope, $http, $interval) {
+app.controller('mainController', ['$scope', '$http', '$interval', '$firebaseObject', function($scope, $http, $interval, $firebaseObject) {
   document.cookie = undefined;
+
+  var ref = firebase.database().ref();
+  $scope.firebaseData = $firebaseObject(ref);
 
   $scope.donaters = [
     {
+      id: "sbux",
+      name: "Starbucks",
+      amtRaised: '$10,000',
+      imgUrl: '/assets/sbux.jpg'
+    },
+    {
+      id: "amazon",
+      name: "Amazon",
+      amtRaised: '$10,000',
+      imgUrl: '/assets/amazon.jpg'
+    },
+    {
+      id: "dicks",
       name: "Dick's Drive-In Restaurants",
       amtRaised: '$10,000',
-      imgUrl: 'http://sheenholders.com/200x200'
+      imgUrl: 'http://placehold.it/200x200'
     },
     {
-      name: "Biscuit Bitch",
-      amtRaised: '$5,000',
-      imgUrl: 'http://sheenholders.com/200x200'
+      id: "boa",
+      name: "Bank of America",
+      amtRaised: '$25,000',
+      imgUrl: '/assets/boa.jpg'
     },
     {
+      id: "vulcan",
       name: "Vulcan",
       amtRaised: '$10,000',
-      imgUrl: 'http://sheenholders.com/200x200'
+      imgUrl: 'http://placehold.it/200x200'
     },
     {
-      name: "Gravity Payments",
+      id: "lennar",
+      name: "Lennar Multifamily Communities",
+      amtRaised: '$5000',
+      imgUrl: 'http://placehold.it/200x200'
+    },
+    {
+      id: "hauschka",
+      name: "Steve & Lindsey Hauschka",
       amtRaised: '$10,000',
-      imgUrl: 'http://sheenholders.com/200x200'
+      imgUrl: 'http://placehold.it/200x200'
     },
     {
-      name: "Lennar Multifamily Homes",
-      amtRaised: '$5000',
-      imgUrl: 'http://sheenholders.com/200x200'
+      id: "lunchlab",
+      name: "Lunchbox Laboratory",
+      amtRaised: '$5,000',
+      imgUrl: '/assets/lunchlab.png'
     },
     {
-      name: "Pemco",
-      amtRaised: '$5000',
-      imgUrl: 'http://sheenholders.com/200x200'
+      id: "zoots",
+      name: "Zoots",
+      amtRaised: '$5,000',
+      imgUrl: '/assets/zoots.jpg'
+    },
+    {
+      id: "seachamber",
+      name: "Seattle Chamber of Commerce",
+      amtRaised: '$10,000',
+      imgUrl: '/assets/seachamber.png'
+    },
+    {
+      id: "restalliance",
+      name: "Seattle Restaurant Alliance",
+      amtRaised: '$10,000',
+      imgUrl: '/assets/restalliance.png'
+    },
+    {
+      id: "biscuit",
+      name: "Biscuit Bitch",
+      amtRaised: '$5,000',
+      imgUrl: 'http://placehold.it/200x200'
+    },
+    {
+      id: "homest",
+      name: "Homestreet Bank",
+      amtRaised: '$5,000',
+      imgUrl: '/assets/homest.png'
+    },
+    {
+      id: "lairdnorton",
+      name: "Laird Norton",
+      amtRaised: '$10,000',
+      imgUrl: 'http://placehold.it/200x200'
     }
   ];
 

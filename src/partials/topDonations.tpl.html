@@ -6,10 +6,10 @@
   <div class="col-xs-12 donater-container">
     <div ng-repeat='donater in donaters' class='donater'>
       <div class="inner-donater">
-        <img src="http://placehold.it/200x200" alt="">
+        <img class="donater-img" ng-src="{{donater.imgUrl}}" alt="">
         <h4 class='donater-name'>{{donater.name}}</h4>
         <p>AMOUNT RAISED:</p>
-        <h3>{{donater.amtRaised}}</h3>
+        <h3>{{firebaseData[donater.id]}}</h3>
       </div>
     </div>
   </div>
