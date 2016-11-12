@@ -83,7 +83,7 @@
 
 
 	app.controller('mainController', ['$scope', '$http', '$interval', '$firebaseObject', function($scope, $http, $interval, $firebaseObject) {
-	  document.cookie = undefined;
+	  document.cookie = 'session-set=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 
 	  var ref = firebase.database().ref();
 	  $scope.firebaseData = $firebaseObject(ref);
