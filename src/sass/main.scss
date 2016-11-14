@@ -338,6 +338,10 @@ body {
   and (min-device-width: 320px) 
   and (max-device-width: 500px) {
 
+  .banner-img {
+    width: 100%;
+  }
+
   .donate-button {
     width: 80% !important;
     height: 130px !important;

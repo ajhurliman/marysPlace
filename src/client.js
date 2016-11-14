@@ -59,25 +59,25 @@ app.controller('mainController', ['$scope', '$http', '$interval', '$firebaseObje
       id: "dicks",
       name: "Dick's Drive-In Restaurants",
       amtRaised: '$10,000',
-      imgUrl: 'http://placehold.it/200x200'
+      imgUrl: '/assets/dicks.png'
     },
     {
       id: "boa",
       name: "Bank of America",
       amtRaised: '$25,000',
-      imgUrl: '/assets/boa.jpg'
+      imgUrl: '/assets/boa.png'
     },
     {
       id: "vulcan",
       name: "Vulcan",
       amtRaised: '$10,000',
-      imgUrl: 'http://placehold.it/200x200'
+      imgUrl: '/assets/vulcan.png'
     },
     {
       id: "lennar",
       name: "Lennar Multifamily Communities",
       amtRaised: '$5000',
-      imgUrl: 'http://placehold.it/200x200'
+      imgUrl: '/assets/lennar.png'
     },
     {
       id: "hauschka",
@@ -113,7 +113,7 @@ app.controller('mainController', ['$scope', '$http', '$interval', '$firebaseObje
       id: "biscuit",
       name: "Biscuit Bitch",
       amtRaised: '$5,000',
-      imgUrl: 'http://placehold.it/200x200'
+      imgUrl: '/assets/biscuit.png'
     },
     {
       id: "homest",
