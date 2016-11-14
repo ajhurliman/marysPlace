@@ -126,6 +126,12 @@ app.controller('mainController', ['$scope', '$http', '$interval', '$firebaseObje
       name: "Laird Norton",
       amtRaised: '$10,000',
       imgUrl: 'http://placehold.it/200x200'
+    },
+    {
+      id: "womenscouncil",
+      name: "Seattle Women's Council",
+      amtRaised: '$5,000',
+      imgUrl: '/assets/womenscouncil.png'
     }
   ];
 
