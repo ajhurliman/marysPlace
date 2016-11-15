@@ -47,14 +47,14 @@ app.controller('mainController', ['$scope', '$http', '$interval', '$firebaseObje
       id: "sbux",
       name: "Starbucks",
       amtRaised: '$10,000',
-      imgUrl: '/assets/sbux.jpg'
+      imgUrl: '/assets/sbux.png'
     },
-    {
-      id: "amazon",
-      name: "Amazon",
-      amtRaised: '$10,000',
-      imgUrl: '/assets/amazon.jpg'
-    },
+    // {
+    //   id: "amazon",
+    //   name: "Amazon",
+    //   amtRaised: '$10,000',
+    //   imgUrl: '/assets/amazon.jpg'
+    // },
     {
       id: "dicks",
       name: "Dick's Drive-In Restaurants",
@@ -67,12 +67,12 @@ app.controller('mainController', ['$scope', '$http', '$interval', '$firebaseObje
       amtRaised: '$25,000',
       imgUrl: '/assets/boa.png'
     },
-    {
-      id: "vulcan",
-      name: "Vulcan",
-      amtRaised: '$10,000',
-      imgUrl: '/assets/vulcan.png'
-    },
+    // {
+    //   id: "vulcan",
+    //   name: "Vulcan",
+    //   amtRaised: '$10,000',
+    //   imgUrl: '/assets/vulcan.png'
+    // },
     {
       id: "lennar",
       name: "Lennar Multifamily Communities",
@@ -83,7 +83,7 @@ app.controller('mainController', ['$scope', '$http', '$interval', '$firebaseObje
       id: "hauschka",
       name: "Steve & Lindsey Hauschka",
       amtRaised: '$10,000',
-      imgUrl: 'http://placehold.it/200x200'
+      imgUrl: '/assets/hauschka.png'
     },
     {
       id: "lunchlab",
@@ -97,12 +97,12 @@ app.controller('mainController', ['$scope', '$http', '$interval', '$firebaseObje
       amtRaised: '$5,000',
       imgUrl: '/assets/zoots.jpg'
     },
-    {
-      id: "seachamber",
-      name: "Seattle Chamber of Commerce",
-      amtRaised: '$10,000',
-      imgUrl: '/assets/seachamber.png'
-    },
+    // {
+    //   id: "seachamber",
+    //   name: "Seattle Chamber of Commerce",
+    //   amtRaised: '$10,000',
+    //   imgUrl: '/assets/seachamber.png'
+    // },
     {
       id: "restalliance",
       name: "Seattle Restaurant Alliance",
@@ -121,17 +121,29 @@ app.controller('mainController', ['$scope', '$http', '$interval', '$firebaseObje
       amtRaised: '$5,000',
       imgUrl: '/assets/homest.png'
     },
-    {
-      id: "lairdnorton",
-      name: "Laird Norton",
-      amtRaised: '$10,000',
-      imgUrl: 'http://placehold.it/200x200'
-    },
+    // {
+    //   id: "lairdnorton",
+    //   name: "Laird Norton",
+    //   amtRaised: '$10,000',
+    //   imgUrl: 'http://placehold.it/200x200'
+    // },
     {
       id: "womenscouncil",
       name: "Seattle Women's Council",
       amtRaised: '$5,000',
       imgUrl: '/assets/womenscouncil.png'
+    },
+    {
+      id: "nationwide",
+      name: "Nationwide",
+      amtRaised: '$5,000',
+      imgUrl: '/assets/nationwide.png'
+    },
+    {
+      id: "verticalbridge",
+      name: "Vertical Bridge",
+      amtRaised: '$2,500',
+      imgUrl: '/assets/verticalbridge.png'
     }
   ];
 
