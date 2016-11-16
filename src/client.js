@@ -43,12 +43,12 @@ app.controller('mainController', ['$scope', '$http', '$interval', '$firebaseObje
   $scope.firebaseData = $firebaseObject(ref);
 
   $scope.donaters = [
-    {
-      id: "sbux",
-      name: "Starbucks",
-      amtRaised: '$10,000',
-      imgUrl: '/assets/sbux.png'
-    },
+    // {
+    //   id: "sbux",
+    //   name: "Starbucks",
+    //   amtRaised: '$10,000',
+    //   imgUrl: '/assets/sbux.png'
+    // },
     // {
     //   id: "amazon",
     //   name: "Amazon",
@@ -67,12 +67,12 @@ app.controller('mainController', ['$scope', '$http', '$interval', '$firebaseObje
       amtRaised: '$25,000',
       imgUrl: '/assets/boa.png'
     },
-    // {
-    //   id: "vulcan",
-    //   name: "Vulcan",
-    //   amtRaised: '$10,000',
-    //   imgUrl: '/assets/vulcan.png'
-    // },
+    {
+      id: "vulcan",
+      name: "Vulcan",
+      amtRaised: '$10,000',
+      imgUrl: '/assets/vulcan.png'
+    },
     {
       id: "lennar",
       name: "Lennar Multifamily Communities",
@@ -96,6 +96,12 @@ app.controller('mainController', ['$scope', '$http', '$interval', '$firebaseObje
       name: "Zoots",
       amtRaised: '$5,000',
       imgUrl: '/assets/zoots.jpg'
+    },
+    {
+      id: "weyerhaeuser",
+      name: "Weyerhaeuser",
+      amtRaised: '$10,000',
+      imgUrl: '/assets/weyer.jpg'
     },
     // {
     //   id: "seachamber",
