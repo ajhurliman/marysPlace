@@ -163,39 +163,55 @@ app.controller('mainController', ['$scope', '$http', '$interval', '$firebaseObje
       "name": "Biscuit Bitch"
     },
     {
-      "amount": 10000,
-      "name": "Vulcan"
+      "amount": 25000,
+      "name": "Weyerhaeuser"
     },
     {
       "amount": 10000,
-      "name": "Gravity Payments"
+      "name": "Seattle Restaurant Alliance"
     },
     {
-      "amount": 5000,
-      "name": "Lennar Multifamily Homes"
+      "amount": 10000,
+      "name": "Lennar Multifamily Communities"
     },
     {
-      "amount": 5000,
-      "name": "Pemco"
+      "amount": 10000,
+      "name": "Steve & Lindsey Hauschka"
     },
     {
-      "amount": 95,
+      "amount": 13000,
+      "name": "Women's Council of Realtors"
+    },
+    {
+      "amount": 10000,
+      "name": "HomeStreet Bank"
+    },
+    {
+      "amount": 25000,
+      "name": "Bank of America"
+    },
+    {
+      "amount": 10000,
+      "name": "Lunchbox Laboratory"
+    },
+    {
+      "amount": 100,
       "name": "Francis Horton"
     },
     {
-      "amount": 185,
+      "amount": 500,
       "name": "Laura Andrews"
     },
     {
-      "amount":200,
+      "amount": 150,
       "name": "Ophelia Olsen"
     },
     {
-      "amount": 45,
+      "amount": 12,
       "name": "Frank Puckett"
     },
     {
-      "amount": 55,
+      "amount": 50,
       "name": "Robyn Ray"
     },
     {
