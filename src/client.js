@@ -67,12 +67,12 @@ app.controller('mainController', ['$scope', '$http', '$interval', '$firebaseObje
       amtRaised: '$25,000',
       imgUrl: '/assets/boa.png'
     },
-    {
-      id: "vulcan",
-      name: "Vulcan",
-      amtRaised: '$10,000',
-      imgUrl: '/assets/vulcan.png'
-    },
+    // {
+    //   id: "vulcan",
+    //   name: "Vulcan",
+    //   amtRaised: '$10,000',
+    //   imgUrl: '/assets/vulcan.png'
+    // },
     {
       id: "lennar",
       name: "Lennar Multifamily Communities",
@@ -98,7 +98,7 @@ app.controller('mainController', ['$scope', '$http', '$interval', '$firebaseObje
       imgUrl: '/assets/zoots.jpg'
     },
     {
-      id: "weyerhaeuser",
+      id: "weyer",
       name: "Weyerhaeuser",
       amtRaised: '$10,000',
       imgUrl: '/assets/weyer.jpg'
