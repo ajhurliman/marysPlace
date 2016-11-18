@@ -74,6 +74,12 @@ app.controller('mainController', ['$scope', '$http', '$interval', '$firebaseObje
     //   imgUrl: '/assets/vulcan.png'
     // },
     {
+      id: "comcast",
+      name: "Comcast NBC Universal",
+      amtRaised: '$25,000',
+      imgUrl: '/assets/comcast.png'
+    },
+    {
       id: "lennar",
       name: "Lennar Multifamily Communities",
       amtRaised: '$5000',
