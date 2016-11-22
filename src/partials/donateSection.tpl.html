@@ -5,13 +5,13 @@
     <div class="donation-ticker">
 
       <!-- title -->
-      <h1 class='text-center'>{{totalRaised | currency:'$':0}}</h1>
+      <h1 class='text-center'>{{totalRaised + firebaseData.pledged | currency:'$':0}}</h1>
       <p class='text-center'>Out of $500,000 goal</p>
 
       <!-- progress bar -->
       <div class="progress-bar-container">
         <uib-progressbar class='progress-striped' value="totalRaised" max="goal" type='success'>
-          {{(totalRaised < goal) ? percentRaised : 100}}%
+          {{((totalRaised + firebaseData.pledged) < goal) ? percentRaised : 100}}%
         </uib-progressbar>
       </div>
 

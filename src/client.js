@@ -252,7 +252,7 @@ app.controller('mainController', ['$scope', '$http', '$interval', '$firebaseObje
   }).then(function(res, err) {
     $scope.totalRaised = parseInt(res.data.total);
     // $scope.totalRaised = 100005; //remove before flight!
-    $scope.percentRaised = Math.round($scope.totalRaised/$scope.goal*100);
+    $scope.percentRaised = Math.round(($scope.totalRaised + $firebaseData.pledged)/$scope.goal*100);
   });
 
 }]);
