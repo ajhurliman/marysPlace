@@ -80,6 +80,18 @@ app.controller('mainController', ['$scope', '$http', '$interval', '$firebaseObje
       imgUrl: '/assets/comcast.png'
     },
     {
+      id: "nordstrom",
+      name: "Nordstrom",
+      amtRaised: '$25,000',
+      imgUrl: '/assets/nordstrom.png'
+    },
+    {
+      id: "alaska",
+      name: "Alaska Airlines",
+      amtRaised: '$25,000',
+      imgUrl: '/assets/alaska.png'
+    },
+    {
       id: "lennar",
       name: "Lennar Multifamily Communities",
       amtRaised: '$5000',
@@ -108,6 +120,18 @@ app.controller('mainController', ['$scope', '$http', '$interval', '$firebaseObje
       name: "Weyerhaeuser",
       amtRaised: '$10,000',
       imgUrl: '/assets/weyer.jpg'
+    },
+    {
+      id: "holland",
+      name: "Holland America",
+      amtRaised: '$6,000',
+      imgUrl: '/assets/holland.png'
+    },
+    {
+      id: "kohary",
+      name: "Kohary Builders",
+      amtRaised: '$6,000',
+      imgUrl: '/assets/kohary.png'
     },
     // {
     //   id: "seachamber",
