@@ -11,7 +11,7 @@
       <!-- progress bar -->
       <div class="progress-bar-container">
         <uib-progressbar class='progress-striped' value="totalRaised" max="goal" type='success'>
-          {{((totalRaised + firebaseData.pledged) < goal) ? percentRaised : 100}}%
+          {{((totalRaised + firebaseData.pledged) < goal) ? ((totalRaised+firebaseData.pledged)/goal*100) : 100 | number:0}}%
         </uib-progressbar>
       </div>
 

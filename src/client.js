@@ -104,6 +104,12 @@ app.controller('mainController', ['$scope', '$http', '$interval', '$firebaseObje
       imgUrl: '/assets/hauschka.png'
     },
     {
+      id: "mariners",
+      name: "Seattle Mariners",
+      amtRaised: '$10,000',
+      imgUrl: '/assets/mariners.jpg'
+    },
+    {
       id: "lunchlab",
       name: "Lunchbox Laboratory",
       amtRaised: '$5,000',
@@ -132,6 +138,12 @@ app.controller('mainController', ['$scope', '$http', '$interval', '$firebaseObje
       name: "Kohary Builders",
       amtRaised: '$6,000',
       imgUrl: '/assets/kohary.png'
+    },
+    {
+      id: "foster",
+      name: "Foster Pepper",
+      amtRaised: '$2,500',
+      imgUrl: '/assets/foster.png'
     },
     // {
     //   id: "seachamber",
@@ -276,7 +288,7 @@ app.controller('mainController', ['$scope', '$http', '$interval', '$firebaseObje
   }).then(function(res, err) {
     $scope.totalRaised = parseInt(res.data.total);
     // $scope.totalRaised = 100005; //remove before flight!
-    $scope.percentRaised = Math.round(($scope.totalRaised + $firebaseData.pledged)/$scope.goal*100);
+    $scope.percentRaised = Math.round(($scope.totalRaised + $scope.firebaseData.pledged)/$scope.goal*100);
   });
 
 }]);
