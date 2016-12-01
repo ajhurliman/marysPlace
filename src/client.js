@@ -43,18 +43,18 @@ app.controller('mainController', ['$scope', '$http', '$interval', '$firebaseObje
   $scope.firebaseData = $firebaseObject(ref);
 
   $scope.donaters = [
-    // {
-    //   id: "sbux",
-    //   name: "Starbucks",
-    //   amtRaised: '$10,000',
-    //   imgUrl: '/assets/sbux.png'
-    // },
-    // {
-    //   id: "amazon",
-    //   name: "Amazon",
-    //   amtRaised: '$10,000',
-    //   imgUrl: '/assets/amazon.jpg'
-    // },
+    {
+      id: "sbux",
+      name: "Starbucks",
+      amtRaised: '$1,000,000',
+      imgUrl: '/assets/sbux.png'
+    },
+    {
+      id: "microsoft",
+      name: "Microsoft",
+      amtRaised: '$250,000',
+      imgUrl: '/assets/microsoft.png'
+    },
     {
       id: "dicks",
       name: "Dick's Drive-In Restaurants",
@@ -67,12 +67,24 @@ app.controller('mainController', ['$scope', '$http', '$interval', '$firebaseObje
       amtRaised: '$25,000',
       imgUrl: '/assets/boa.png'
     },
-    // {
-    //   id: "vulcan",
-    //   name: "Vulcan",
-    //   amtRaised: '$10,000',
-    //   imgUrl: '/assets/vulcan.png'
-    // },
+    {
+      id: "expedia",
+      name: "Expedia",
+      amtRaised: '$25,000',
+      imgUrl: '/assets/expedia.png'
+    },
+    {
+      id: "concur",
+      name: "Concur",
+      amtRaised: '$25,000',
+      imgUrl: '/assets/concur.png'
+    },
+    {
+      id: "keybank",
+      name: "Key Bank",
+      amtRaised: '$25,000',
+      imgUrl: '/assets/keybank.png'
+    },
     {
       id: "comcast",
       name: "Comcast NBC Universal",
@@ -92,10 +104,16 @@ app.controller('mainController', ['$scope', '$http', '$interval', '$firebaseObje
       imgUrl: '/assets/alaska.png'
     },
     {
-      id: "lennar",
-      name: "Lennar Multifamily Communities",
-      amtRaised: '$5000',
-      imgUrl: '/assets/lennar.png'
+      id: "weyer",
+      name: "Weyerhaeuser",
+      amtRaised: '$10,000',
+      imgUrl: '/assets/weyer.jpg'
+    },
+    {
+      id: "womenscouncil",
+      name: "Seattle Women's Council",
+      amtRaised: '$5,000',
+      imgUrl: '/assets/womenscouncil.png'
     },
     {
       id: "hauschka",
@@ -104,11 +122,24 @@ app.controller('mainController', ['$scope', '$http', '$interval', '$firebaseObje
       imgUrl: '/assets/hauschka.png'
     },
     {
+      id: "grouphealth",
+      name: "Group Health",
+      amtRaised: '$10,000',
+      imgUrl: '/assets/grouphealth.jpg'
+    },
+    {
       id: "mariners",
       name: "Seattle Mariners",
       amtRaised: '$10,000',
       imgUrl: '/assets/mariners.jpg'
     },
+    {
+      id: "homest",
+      name: "Homestreet Bank",
+      amtRaised: '$5,000',
+      imgUrl: '/assets/homest.png'
+    },
+    
     {
       id: "lunchlab",
       name: "Lunchbox Laboratory",
@@ -122,10 +153,23 @@ app.controller('mainController', ['$scope', '$http', '$interval', '$firebaseObje
       imgUrl: '/assets/zoots.jpg'
     },
     {
-      id: "weyer",
-      name: "Weyerhaeuser",
+      id: "lennar",
+      name: "Lennar Multifamily Communities",
+      amtRaised: '$5,000',
+      imgUrl: '/assets/lennar.png'
+    },
+    
+    // {
+    //   id: "seachamber",
+    //   name: "Seattle Chamber of Commerce",
+    //   amtRaised: '$10,000',
+    //   imgUrl: '/assets/seachamber.png'
+    // },
+    {
+      id: "restalliance",
+      name: "Seattle Restaurant Alliance",
       amtRaised: '$10,000',
-      imgUrl: '/assets/weyer.jpg'
+      imgUrl: '/assets/restalliance.png'
     },
     {
       id: "holland",
@@ -140,52 +184,30 @@ app.controller('mainController', ['$scope', '$http', '$interval', '$firebaseObje
       imgUrl: '/assets/kohary.png'
     },
     {
-      id: "foster",
-      name: "Foster Pepper",
-      amtRaised: '$2,500',
-      imgUrl: '/assets/foster.png'
-    },
-    // {
-    //   id: "seachamber",
-    //   name: "Seattle Chamber of Commerce",
-    //   amtRaised: '$10,000',
-    //   imgUrl: '/assets/seachamber.png'
-    // },
-    {
-      id: "restalliance",
-      name: "Seattle Restaurant Alliance",
-      amtRaised: '$10,000',
-      imgUrl: '/assets/restalliance.png'
-    },
-    {
       id: "biscuit",
       name: "Biscuit Bitch",
       amtRaised: '$5,000',
       imgUrl: '/assets/biscuit.png'
     },
-    {
-      id: "homest",
-      name: "Homestreet Bank",
-      amtRaised: '$5,000',
-      imgUrl: '/assets/homest.png'
-    },
+    
     // {
     //   id: "lairdnorton",
     //   name: "Laird Norton",
     //   amtRaised: '$10,000',
     //   imgUrl: 'http://placehold.it/200x200'
     // },
-    {
-      id: "womenscouncil",
-      name: "Seattle Women's Council",
-      amtRaised: '$5,000',
-      imgUrl: '/assets/womenscouncil.png'
-    },
+    
     {
       id: "nationwide",
       name: "Nationwide",
       amtRaised: '$5,000',
       imgUrl: '/assets/nationwide.png'
+    },
+    {
+      id: "foster",
+      name: "Foster Pepper",
+      amtRaised: '$2,500',
+      imgUrl: '/assets/foster.png'
     },
     {
       id: "verticalbridge",
@@ -196,6 +218,14 @@ app.controller('mainController', ['$scope', '$http', '$interval', '$firebaseObje
   ];
 
   $scope.myTickerItems = [
+    {
+      "amount": 1000000,
+      "name": "Starbucks"
+    },
+    {
+      "amount": 250000,
+      "name": "Microsoft"
+    },
     {
       "amount": 10000,
       "name": "Dick's Drive-In Restaurants"
@@ -274,7 +304,7 @@ app.controller('mainController', ['$scope', '$http', '$interval', '$firebaseObje
     }
   ];
 
-  $scope.goal = 500000;
+  $scope.goal = 2000000;
 
   $scope.storyIsVisible = false;
 

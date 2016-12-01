@@ -122,8 +122,8 @@ server.set('port', process.env.PORT || 3000);
 server.use(express.static( process.env.PWD + '/build'));
 
 server.get('/getTotal', function(req, res) {
-  // res.json({total: totalRaised}); 
-  res.json({total: 50000}); //remove before flight
+  res.json({total: totalRaised}); 
+  // res.json({total: 50000}); //remove before flight
 });
 
 // var options = {
